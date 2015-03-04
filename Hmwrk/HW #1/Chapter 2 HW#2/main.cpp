@@ -8,7 +8,7 @@
 using namespace std;
 //User Libraries
 
-//Global Libraries
+//Global 
 
 //Function Prototypes
 
@@ -16,15 +16,15 @@ using namespace std;
 
 int main(int argc, char** argv) {
    
-    float totalGained, // Total Sales Gained
-           sales = 8.6e6, // Sales Made in one year
-           salesGained = .58 ; // Percentage of sales actually made
+    float ttlGnd, // Total Sales Gained
+           sls = 8.6e6, // Sales Made in one year
+           slsGnd = .58 ; // Percentage of sales actually made
     
-    totalGained = sales * salesGained;
+    ttlGnd = sls * slsGnd;
     
         cout << "With a 58 percent sales gain, the East Coast \n";
             cout << "Division makes with 8.6 million $, a total of\n";
-             cout << totalGained << "$!" << endl;   
+             cout << ttlGnd << "$!" << endl;   
     
      return 0;
 }
