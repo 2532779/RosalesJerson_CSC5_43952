@@ -6,10 +6,17 @@
 
 #include <iostream>
 using namespace std;
+//User Libraries
+
+//Global Libraries
+
+//Function Prototypes
+
+//Execution Begins 
 
 int main(int argc, char** argv) {
    
-    double totalGained, // Total Sales Gained
+    float totalGained, // Total Sales Gained
            sales = 8.6e6, // Sales Made in one year
            salesGained = .58 ; // Percentage of sales actually made
     
