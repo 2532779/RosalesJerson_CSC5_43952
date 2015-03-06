@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
     nEDrnks=nCust/static_cast<float>(CNVPCT)*pEDrnks;
     nCDrnks=nEDrnks/static_cast<float>(CNVPCT)*pCDrnks;
     //Output Everything
-    cout<<"Customer Survery Problem"<<endl;
+    cout<<"Customer Survey Problem"<<endl;
     cout<<"Known/Given Values"<<endl;
     cout<<"Number of customers = "<<nCust<<endl;
     cout<<"Percentage Energy Drinkers = "

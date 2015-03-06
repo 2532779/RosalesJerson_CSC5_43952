@@ -10,7 +10,8 @@
 using namespace std;
 //User Libraries
 
-//Global Libraries
+//Global Functions
+unsigned char CNVPCT=100;
 
 //Function Prototypes
 
@@ -18,16 +19,16 @@ using namespace std;
 
 int main(int argc, char** argv) {
             float ttl,
-            statTx = .04,
-            ctyTx = .02,
+            statTx = 4,
+            ctyTx = 2,
             ttlTx,
             addTx,
             prchse = 95.00 ;
-    ttlTx = statTx + ctyTx ;
-    addTx = prchse * ttlTx ; 
-    ttl = prchse + addTx ;
+    ttlTx = statTx + ctyTx ;//State Tax + City Tax
+    addTx = prchse * ttlTx/CNVPCT ; //Purchase times the total tax 
+    ttl = prchse + addTx ;//We get our total here!
     
-    cout << "If the state tax is 4  and the county tax is 2 \n ";
+    cout << "If the state tax is 4 %  and the county tax is 2% \n ";
     cout << "percent of a 95$ purchase, then the total is " << ttl << "$.\n";
 
     return 0;

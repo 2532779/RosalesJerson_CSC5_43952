@@ -1,7 +1,6 @@
 /* 
  * File:  Problem for number 8
  * Author: Jerson Rosales
- *
  * Created on February 22, 2015, 6:29 PM
  */
 
@@ -13,7 +12,7 @@ using namespace std;
 int main(int argc, char** argv) {
     
     
-    double priceOfItem1 = 15.95,
+    float priceOfItem1 = 15.95,
             priceOfItem2 = 24.95,
             priceOfItem3 = 6.95,
             priceOfItem4 = 12.95,
