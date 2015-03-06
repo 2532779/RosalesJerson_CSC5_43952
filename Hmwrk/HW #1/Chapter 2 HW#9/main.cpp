@@ -11,7 +11,7 @@ using namespace std;
 
 //User libraries
 
-//Global libraries
+//Global Constants
 
 //Function Prototypes
 

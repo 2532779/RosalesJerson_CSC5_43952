@@ -10,7 +10,7 @@
 using namespace std;
 //User Libraries
 
-//Global Functions
+//Global Constants
 
 //Function Prototypes
 

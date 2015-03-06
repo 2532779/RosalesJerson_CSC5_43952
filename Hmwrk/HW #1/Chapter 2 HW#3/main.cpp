@@ -10,7 +10,7 @@
 using namespace std;
 //User Libraries
 
-//Global Functions
+//Global Constants
 unsigned char CNVPCT=100;
 
 //Function Prototypes
@@ -19,10 +19,10 @@ unsigned char CNVPCT=100;
 
 int main(int argc, char** argv) {
             float ttl,
-            statTx = 4,
-            ctyTx = 2,
-            ttlTx,
-            addTx,
+            statTx = 4,//State Tax
+            ctyTx = 2,//City tax
+            ttlTx,//Total Tax
+            addTx,//Added Tax
             prchse = 95.00 ;
     ttlTx = statTx + ctyTx ;//State Tax + City Tax
     addTx = prchse * ttlTx/CNVPCT ; //Purchase times the total tax 

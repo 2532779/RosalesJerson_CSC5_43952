@@ -8,7 +8,8 @@
 using namespace std;
 //User Libraries
 
-//Global 
+//Global Constants
+unsigned char CNVPCT=100;
 
 //Function Prototypes
 
@@ -18,9 +19,9 @@ int main(int argc, char** argv) {
    
     float ttlGnd, // Total Sales Gained
            sls = 8.6e6, // Sales Made in one year
-           slsGnd = .58 ; // Percentage of sales actually made
+           slsGnd = 58 ; // Percentage of sales actually made
     
-    ttlGnd = sls * slsGnd;
+    ttlGnd = sls * slsGnd/CNVPCT;
     
         cout << "With a 58 percent sales gain, the East Coast \n";
             cout << "Division makes with 8.6 million $, a total of\n";
