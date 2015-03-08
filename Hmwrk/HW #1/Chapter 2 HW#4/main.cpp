@@ -19,7 +19,7 @@ unsigned char CNVPCT=100;
 
 
 int main(int argc, char** argv) {
-            float mlWtx,//Meal With Tax
+            float
             mlWTxTp,        
             meal = 88.67,//Cost of Meal
             tax = 6.75, // tax for meal
