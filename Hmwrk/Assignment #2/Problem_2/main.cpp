@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     t3=stC*stCC;
     fT=t1+t2+t3;
     cout<<setprecision(2)<<fixed;
-    cout<<"Class A Seats:"<<stA<<endl;
+    cout<<"Class A Seats: $"<<stA<<endl;
     cout<<"Class B Seats:"<<stB<<endl;
     cout<<"Class C Seats:"<<stC<<endl;
     cout<<"Total Sales:"<<fT<<endl;
