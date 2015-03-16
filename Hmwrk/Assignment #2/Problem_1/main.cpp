@@ -27,7 +27,8 @@ int main(int argc, char** argv) {
     mpg=mil/gal;
     cout<<"Total Miles: "<<mil<<endl;
     cout<<"Total Gal: "<<gal<<endl;
-    cout<<"MPG: "<< setprecision(4) <<mpg<<endl;
+    cout<<setprecision(2)<<fixed;
+    cout<<"MPG: "<<mpg<<endl;
            return 0;
 }
 
