@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -26,7 +27,7 @@ int main(int argc, char** argv) {
     mpg=mil/gal;
     cout<<"Total Miles: "<<mil<<endl;
     cout<<"Total Gal: "<<gal<<endl;
-    cout<<"MPG: "<<mpg<<endl;
+    cout<<"MPG: "<< setprecision(4) <<mpg<<endl;
            return 0;
 }
 
