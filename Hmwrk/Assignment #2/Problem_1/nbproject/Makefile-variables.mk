@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=snickers_app
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/snickers_app
+CND_ARTIFACT_NAME_Debug=problem_1
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/problem_1
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=snickersapp.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/snickersapp.tar
+CND_PACKAGE_NAME_Debug=problem1.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/problem1.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=snickers_app
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/snickers_app
+CND_ARTIFACT_NAME_Release=problem_1
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/problem_1
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=snickersapp.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/snickersapp.tar
+CND_PACKAGE_NAME_Release=problem1.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/problem1.tar
 #
 # include compiler specific variables
 #
