@@ -18,7 +18,26 @@ using namespace std;
 
 //Execution Begins
 int main(int argc, char** argv) {
-    float ckies=30,,cal=300
+    //Declare Variables
+    //How many cookies,total calories,calories per cookies,
+    unsigned short ckies=30,cal=300,calpC=10;
+    //Input users amount of cookie eaten and left over cookies from bag
+    float amtoC,lftovrC;
+    //Total calories of cookies and total calories of final cookies
+    float ttlc;
+    cout<<"How many cookies have you eaten?"<<endl;
+    cin>>amtoC;
+    //Calculations
+    lftovrC=ckies-amtoC;
+    ttlc=cal-(lftovrC*static_cast<float>(calpC));
+    
+    //Output the results
+    cout<<"Total Number of cookies eaten: "<<amtoC<<endl;
+    cout<<"Total Number of calories consumed: "<<ttlc<<endl;
+    
+            
+            
+    
 
     return 0;
 }
