@@ -29,9 +29,9 @@ int main(int argc, char** argv) {
     pctM=(nM/tnS)*100;
     pctF=(nF/tnS)*100;
     cout<<setprecision(2)<<fixed;
-    cout<<"Male Students: "<<nM<<endl;
-    cout<<"Percent of Male Students: "<<pctM<<"%"<<endl;
-    cout<<"Female Students: "<<nF<<endl;
+    cout<<"Male Students: "<<setw(18)<<nM<<endl;
+    cout<<"Percent of Male Students: "<<setw(7)<<pctM<<"%"<<endl;
+    cout<<"Female Students: "<<setw(16)<<nF<<endl;
     cout<<"Percent of Female Students: "<<pctF<<"%"<<endl;
     
     

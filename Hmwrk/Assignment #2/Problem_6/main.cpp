@@ -36,9 +36,9 @@ int main(int argc, char** argv) {
     //Output The results!
     cout<<"Total Number of Cookies: "<<cI<<endl;
     cout<<setprecision(2)<<fixed;
-    cout<<"Total cups of sugar: "<<ncS<<endl;
-    cout<<"Total cups of butter: "<<ncB<<endl;
-    cout<<"Total cups of flour: "<<ncF<<endl;
+    cout<<"Total cups of sugar: "<<setw(8)<<ncS<<endl;
+    cout<<"Total cups of butter: "<<setw(7)<<ncB<<endl;
+    cout<<"Total cups of flour: "<<setw(8)<<ncF<<endl;
     return 0;
 }
 
