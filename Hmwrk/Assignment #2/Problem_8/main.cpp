@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     //Output results
     cout<<setprecision(2)<<fixed<<showpoint;
     cout<<"Pallet Weight: "<<palW<<" lbs"<<endl;
-    cout<<"Total Weight: "<<setw(5)<<ttlW<<" lbs"<<endl;
+    cout<<"Total Weight: "<<ttlW<<" lbs"<<endl;
     cout<<"Total Widgets: "<<stkWi<<endl;
     
     
