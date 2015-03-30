@@ -19,32 +19,46 @@ using namespace std;
 //Execution Begins
 int main(int argc, char** argv) {
     //Declare Variables
-    short num;
+     unsigned short num;
     //Prompt user to enter inputs
     cout<<"Choose a number from 1-10 to convert to Roman Numeral"<<endl;
     cin>>num;
-        if (num==1)
+    switch (num)
+    {
+            case 1:
             cout<<"Roman Numeral: I"<<endl;
-        else if (num==2)
+            break;
+            case 2:
             cout<<"Roman Numeral: II"<<endl;
-        else if (num==3)
+            break;
+            case 3:
             cout<<"Roman Numeral: III"<<endl;
-        else if (num==4)
+            break;
+            case 4:
             cout<<"Roman Numeral: IV"<<endl;
-        else if (num==5)
+            break;
+            case 5:
             cout<<"Roman Numeral: V"<<endl;
-        else if (num==6)
+            break;
+            case 6:
             cout<<"Roman Numeral: VI"<<endl;
-        else if (num==7)
+            break;
+            case 7:
             cout<<"Roman Numeral: VII"<<endl;
-        else if (num==8)
+            break;
+            case 8:
             cout<<"Roman Numeral: VIII"<<endl;
-        else if (num==9)
+            break;
+            case 9:
             cout<<"Roman Numeral: IX"<<endl;
-        else if (num==10)
+            break;
+            case 10:
             cout<<"Roman Numeral: X"<<endl;
-        else
+            break;
+            default:
             cout<<"You Must Enter a number from 1-10!"<<endl;
+            break;
+    }
         
                     
     

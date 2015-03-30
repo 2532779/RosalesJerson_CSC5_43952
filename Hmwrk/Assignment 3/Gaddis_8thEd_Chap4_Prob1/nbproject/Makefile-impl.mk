@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Comparing Two Numbers
+PROJECTNAME=Gaddis_8thEd_Chap4_Prob1
 
 # Active Configuration
 DEFAULTCONF=Debug
