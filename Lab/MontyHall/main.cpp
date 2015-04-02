@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     cout<<"How many games would you like to play?(1-4x10^9)"<<endl;
     cin>>nGames;
     cout<<"Are you going to stay if given the opportunity type S for Stay"<<endl;
-    cout<<"Type anything else to choose the other door"<<endl;
+    cout<<"Type C to choose the other door"<<endl;
     cin>>stay;
     //Loop for all the games
     for(int game=1;game<=nGames;game++){
@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
             othDoor=rand()%3+1;
         }while (othDoor==doorOpn||othDoor==door);//Can't be the same
         //Swap the doors if given the opportunity
-        if(stay!='S'&&stay!='s'){
+        if(stay!='S'&&stay!='s'){//Use Demorgans law to test validity
             door=othDoor;
         }
         //Now statistically count how many wins and losses
@@ -60,8 +60,8 @@ int main(int argc, char** argv) {
     cout<<"Out of "<<nGames<<" played!"<<endl;
     if(stay=='S'||stay=='s')cout<<"I am not changing my door and "<<endl;
     else cout<<"I am changing my door and "<<endl;
-    cout<<"I Win ->"<<win<<" times ->"<<100.0f*win/nGames<<"%"<<endl;
-    cout<<"vs losing "<<loss<<" times"<<100.0f*loss/nGames<<"&"<<endl;
+    cout<<"I Win ->"<<win<<" times -> "<<100.0f*win/nGames<<"%"<<endl;
+    cout<<"vs losing "<<loss<<" times "<<100.0f*loss/nGames<<"&"<<endl;
     //Exit Stage right
         
     
