@@ -5,6 +5,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 //User Libraries
@@ -49,31 +50,35 @@ int main(int argc, char** argv) {
     ttl4 = prcOI4 + tax4;
     ttl5 = prcOI5 + tax5;
     
+    //Format output
+    cout<<setprecision(2)<<fixed<<showpoint<<endl;
+    //Output the results
+    
     
     cout << "Item 1: \n";
-    cout << "Subtotal: " << prcOI1 << endl;
-    cout << "Sales Tax: " << tax1 << endl;
-    cout << "Total: " << ttl1 << endl;
+    cout << "Subtotal: $" << prcOI1 << endl;
+    cout << "Sales Tax: $" << tax1 << endl;
+    cout << "Total: $" << ttl1 << endl;
     cout << endl;
     cout << "Item 2: \n";
-    cout << "Subtotal: " << prcOI2 << endl;
-    cout << "Sales Tax: " << tax2 << endl;
-    cout << "Total: " << ttl2 << endl;
+    cout << "Subtotal: $" << prcOI2 << endl;
+    cout << "Sales Tax: $" << tax2 << endl;
+    cout << "Total: $" << ttl2 << endl;
     cout << endl;
     cout << "Item 3: \n";
-    cout << "Subtotal: " << prcOI3 << endl;
-    cout << "Sales Tax: " << tax3 << endl;
-    cout << "Total: " << ttl3 << endl;
+    cout << "Subtotal: $" << prcOI3 << endl;
+    cout << "Sales Tax: $" << tax3 << endl;
+    cout << "Total: $" << ttl3 << endl;
     cout << endl;
     cout << "Item 4: \n";
-    cout << "Subtotal: " << prcOI4 << endl;
-    cout << "Sales Tax: " << tax4 << endl;
-    cout << "Total: " << ttl4 << endl;
+    cout << "Subtotal: $" << prcOI4 << endl;
+    cout << "Sales Tax: $" << tax4 << endl;
+    cout << "Total: $" << ttl4 << endl;
     cout << endl;
     cout << "Item 5: \n";
-    cout << "Subtotal: " << prcOI5 << endl;
-    cout << "Sales Tax: " << tax5 << endl;
-    cout << "Total: " << ttl5 << endl;
+    cout << "Subtotal: $" << prcOI5 << endl;
+    cout << "Sales Tax: $" << tax5 << endl;
+    cout << "Total: $" << ttl5 << endl;
             return 0;
 }
 

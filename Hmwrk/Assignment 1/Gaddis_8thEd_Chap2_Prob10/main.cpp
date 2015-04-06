@@ -17,7 +17,7 @@ using namespace std;
 //Execution begins
 
 int main(int argc, char** argv) {
-    float mil,gal,mpg;//Miles,Gallons,MPG
+    unsigned short mil,gal,mpg;//Miles,Gallons,MPG
     mil=375;//How many miles on a full tank
     gal=15;//How many gallons the tank can hold
     mpg=mil/gal;

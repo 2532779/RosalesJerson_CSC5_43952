@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 //User Libraries
@@ -24,7 +25,7 @@ int main(int argc, char** argv) {
             meal = 88.67,//Cost of Meal
             tax = 6.75, // tax for meal
             ttlTx, //Tax times meal
-            ttlTp, //Tip with tax and meal        
+            ttlTp,//Tip with tax and meal          
             tip = 2, //Tips 
             mlWTx;// meal plus tax 
              
@@ -32,7 +33,9 @@ int main(int argc, char** argv) {
             mlWTx = meal + ttlTx;//Meal With tax!
             ttlTp = mlWTx * tip/CNVPCT;//Meal w/ Tax to get the tip
             mlWTxTp = mlWTx + ttlTp;//Meal w/ Tax with the tip
-            
+            //format out put
+            cout<<setprecision(2)<<fixed<<showpoint<<endl;
+            //Output the results
             cout << "Meal cost: " << meal << "$\n"; 
             cout << "Total tax: "  << ttlTx << "$\n";
             cout << "Tip Amount : " << ttlTp << "$\n";

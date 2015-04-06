@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 //User Libraries
@@ -24,8 +25,11 @@ int main(int argc, char** argv) {
             
             anlPy;//Total Annual pay
     
+    //Calculations
     anlPy = pyAmnt * pyPrds;
-    
+    //Format output
+    cout<<setprecision(2)<<fixed<<showpoint<<endl;
+    //Output the results
     cout << "Total Annual Pay: " << anlPy << "$\n";
             
 

@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 //User Libraries
@@ -18,25 +19,26 @@ using namespace std;
 
 
 int main(int argc, char** argv) {
-     float ocnLvlR = 1.5,
+     float ocnLvlR = 1.5;
         
-            ocnR1 = 5,// Ocean rise in 5 years
+     unsigned short ocnR1 = 5,// Ocean rise in 5 years
             
              ocnR2 = 7, //Ocean rise in 7 years
              
-             ocnR3 = 10, // Ocean rise in 10 years
+             ocnR3 = 10; // Ocean rise in 10 years
              
-             ttlR1,//Total rise in 5 years!
+             float ttlR1,//Total rise in 5 years!
              ttlR2,//Total rise in 7 years!
              ttlR3;//Total rise in 10 years
      
      ttlR1 = ocnR1 * ocnLvlR;//Calculating Rise after 5 years
      ttlR2 = ocnR2 * ocnLvlR;//Calculating Rise after 7 years
      ttlR3 = ocnR3 * ocnLvlR;//Calculating rise after 10 years
-     
-     cout << "Ocean Rise after 5 years: " << ttlR1 << "mm" << endl;
-     cout << "Ocean Rise After 7 years: " << ttlR2 << "mm" << endl;
-     cout << "Ocean Rise after 10 years: " << ttlR3 <<"mm" << endl;
+     //Format output
+     cout<<setprecision(2)<<fixed<<showpoint<<endl;
+     cout << "Ocean Rise after 5 years: " << ttlR1 << " mm" << endl;
+     cout << "Ocean Rise After 7 years: " << ttlR2 << " mm" << endl;
+     cout << "Ocean Rise after 10 years: " << ttlR3 <<" mm" << endl;
      return 0;
 }
 

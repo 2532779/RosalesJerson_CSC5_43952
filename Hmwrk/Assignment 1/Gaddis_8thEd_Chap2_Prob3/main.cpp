@@ -18,10 +18,10 @@ unsigned char CNVPCT=100;
 //Execution Begins
 
 int main(int argc, char** argv) {
-            float ttl,
-            statTx = 4,//State Tax
-            ctyTx = 2,//City tax
-            ttlTx,//Total Tax
+            float ttl;
+            unsigned short statTx = 4,//State Tax
+            ctyTx = 2;//City tax
+            float ttlTx,//Total Tax
             addTx,//Added Tax
             prchse = 95.00 ;
     ttlTx = statTx + ctyTx ;//State Tax + City Tax

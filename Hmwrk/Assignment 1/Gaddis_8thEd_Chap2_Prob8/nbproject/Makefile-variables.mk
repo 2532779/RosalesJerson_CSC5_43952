@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=chapter_2_hw_8
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/chapter_2_hw_8
+CND_ARTIFACT_NAME_Debug=gaddis_8thed_chap2_prob8
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/gaddis_8thed_chap2_prob8
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=chapter2hw#8.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/chapter2hw#8.tar
+CND_PACKAGE_NAME_Debug=gaddis8thedchap2prob8.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/gaddis8thedchap2prob8.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=chapter_2_hw_8
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/chapter_2_hw_8
+CND_ARTIFACT_NAME_Release=gaddis_8thed_chap2_prob8
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/gaddis_8thed_chap2_prob8
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=chapter2hw#8.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/chapter2hw#8.tar
+CND_PACKAGE_NAME_Release=gaddis8thedchap2prob8.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/gaddis8thedchap2prob8.tar
 #
 # include compiler specific variables
 #
