@@ -19,6 +19,10 @@ int main(int argc, char** argv) {
     //Declare Variables
     float miL=1.5;
     unsigned short yrs;
+    cout<<"The ocean level rise is:"<<endl;
+        cout<<endl;
+        cout<<"Year"<<"      "<<"Milliliters"<<endl;
+        cout<<"---------------------------------"<<endl;
     //Loop
     for(yrs=1;yrs<=25;yrs++)//for loop for 25 years
         //Output and calculations

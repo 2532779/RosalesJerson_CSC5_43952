@@ -21,6 +21,10 @@ unsigned char CNVTPCT=100;
 int main(int argc, char** argv) {
     //Declare Variables
     unsigned short yrs=1,yrsRte,inT,strt=2500,ttl;
+    cout<<"Increased Rates for Country Club up to Year 6:"<<endl;
+    cout<<endl;
+    cout<<"Year"<<"      "<<"Amount"<<endl;
+    cout<<"--------------------------"<<endl;
     //Loop
     while (yrs<=6)
     {

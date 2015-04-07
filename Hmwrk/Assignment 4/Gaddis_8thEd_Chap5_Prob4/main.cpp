@@ -19,6 +19,8 @@ int main(int argc, char** argv) {
     //Declare Variables
     float caL=3.6;
     unsigned short min=5;
+    cout<<"Minutes"<<"      "<<"Calories Burned"<<endl;
+    cout<<"---------------------------------------"<<endl;
     //Loop
     while (min<=30)
     {

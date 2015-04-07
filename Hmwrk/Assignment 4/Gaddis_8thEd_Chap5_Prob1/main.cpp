@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
         ttl+=cnt;
     }
     cout<<"The total sum is "<<ttl<<endl;
-    cout<<"Do you want to find a sum of another number?"<<endl;
+    cout<<"Do you want to find a sum of another number?(Y/N)"<<endl;
     cin>>agn;
     }while(agn=='Y'||agn=='y');
     cout<<"Have a nice day!"<<endl;
