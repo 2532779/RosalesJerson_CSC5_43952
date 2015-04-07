@@ -19,7 +19,9 @@ using namespace std;
 //Execution Begins here!
 int main(int argc, char** argv) {
     //Declare Variables
+    char agn;
     int num,ttl=0;
+    do{
     //Prompt user for inputs
     cout<<"Input a number you wish to get the sum of."<<endl;
     cin>>num;
@@ -35,6 +37,10 @@ int main(int argc, char** argv) {
         ttl+=cnt;
     }
     cout<<"The total sum is "<<ttl<<endl;
+    cout<<"Do you want to find a sum of another number?"<<endl;
+    cin>>agn;
+    }while(agn=='Y'||agn=='y');
+    cout<<"Have a nice day!"<<endl;
     
 
     return 0;
