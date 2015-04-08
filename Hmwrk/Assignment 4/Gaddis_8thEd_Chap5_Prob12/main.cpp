@@ -20,6 +20,9 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare Variables
     float cEl,fAhr;
+    //Intro to the program
+    cout<<"This program converts Celsius to Fahrenheit (1-20)"<<endl;
+    cout<<endl;
     cout<<"Celsius"<<"      "<<"Fahrenheit"<<endl;
     cout<<"----------------------------------"<<endl;
     for(cEl=1;cEl<=20;cEl++)

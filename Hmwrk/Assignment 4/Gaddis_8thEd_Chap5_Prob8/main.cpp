@@ -45,6 +45,7 @@ int main(int argc, char** argv) {
                 //Seed random number generator
                 srand(seed);
                 cout<<"This program is a Addition Math Tutor"<<endl;
+                cout<<"You must Type a number!"<<endl;
                 do{
                 num1=(rand()%(maxval-minval+1))+minval;
                 num2=(rand()%(maxval-minval+1))+minval;
@@ -69,6 +70,7 @@ int main(int argc, char** argv) {
                 //Seed random number generator
                 srand(seed);
                 cout<<"This program is a Subtraction Math Tutor"<<endl;
+                cout<<"You must Type a number!"<<endl;
                 do{
                 num1=(rand()%(maxval-minval+1))+minval;
                 num2=(rand()%(maxval-minval+1))+minval;
@@ -93,6 +95,7 @@ int main(int argc, char** argv) {
                 //Seed random number generator
                 srand(seed);
                 cout<<"This program is a Multiplication Math Tutor"<<endl;
+                cout<<"You must Type a number!"<<endl;
                 do{
                 num1=(rand()%(maxMval-minMval+1))+minval;
                 num2=(rand()%(maxMval-minMval+1))+minval;
@@ -117,6 +120,7 @@ int main(int argc, char** argv) {
                 //Seed random number generator
                 srand(seed);
                 cout<<"This program is a Division Math Tutor"<<endl;
+                cout<<"You must Type a number!"<<endl;
                 do{
                 num1=(rand()%(maxMval-minMval+1))+minval;
                 num2=(rand()%(maxMval-minMval+1))+minval;
@@ -137,6 +141,7 @@ int main(int argc, char** argv) {
         }
         default:{
                 cout<<"Exit?"<<endl;
+                break;
         }
     };
     }while(choice>='1'&&choice<='4');

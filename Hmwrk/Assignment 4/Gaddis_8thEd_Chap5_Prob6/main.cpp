@@ -22,11 +22,10 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare Variables
     char agn;
-    float spd,hrsDvn,dstnce,hrs=1;
+    float spd,hrsDvn,dstnce;
     //Introduction to Program
     cout<<"This Program calculates how many miles you driven each hour"<<endl;
     cout<<endl;
-    do{
     //Prompt user for inputs
     cout<<"How many hours have you driven?"<<endl;
     cin>>hrsDvn;
@@ -44,16 +43,13 @@ int main(int argc, char** argv) {
     }
     cout<<"Hour  "<<"   "<<"Miles Driven  "<<endl;
     cout<<"-------------------------------"<<endl;
-    while (hrs<=hrsDvn)
+    for(float hrs=1;hrs<=hrsDvn;hrs++)
     {
         dstnce+=spd;
         cout<<hrs<<"        "<<dstnce<<endl;
-        hrs++;
-                
     }
-    cout<<"Do you wish to calculate another input?(Y/N)"<<endl;
-    cin>>agn;
-    }while(agn=='Y'||agn=='y');
+    
+    
 
     return 0;
 }

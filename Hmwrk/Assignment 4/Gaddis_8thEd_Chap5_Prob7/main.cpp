@@ -22,6 +22,9 @@ unsigned short CVTPCT=100;
 int main(int argc, char** argv) {
     //Declare Variables
     float days,pen=1;
+    //Intro to the Program
+    cout<<"This program calculates each day your pennies double!"<<endl;
+    cout<<endl;
     //Prompt user for input
     cout<<"How many days are you going to work this week?"<<endl;
     cin>>days;
