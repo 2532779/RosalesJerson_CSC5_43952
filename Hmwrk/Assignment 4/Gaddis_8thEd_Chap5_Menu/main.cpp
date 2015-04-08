@@ -1,19 +1,18 @@
 /* 
  * File:   main.cpp
  * Author: Jerson Rosales
- * Purpose:  To Illustrate the code for
- * developing a menu
- * Problem 1 -> Comparing two numbers
- * Problem 2 -> Roman Numeral Converter
- * Problem 3 -> Determine if your birthday is a magic date
- * Problem 4 -> Comparing Areas of two rectangles
- * Problem 5 -> Determining BMI
- * Problem 6 -> Determines the Newtons of a mass
- * Problem 7 -> Seconds Converter
- * Problem 8 -> Change-counting game
- * Problem 9 -> Determines discount on packages
- * Problem 10 -> Determines how many points you get in a month for book club
- * Created on October 13, 2011, 6:44 PM
+ * Purpose:  Gaddis Menu For Chapter 5 Homework
+ * Problem 1 -> Sum of numbers calculator
+ * Problem 2 -> Ocean Level Rise 
+ * Problem 3 -> How much Calories burned
+ * Problem 4 -> Rates For Country Club
+ * Problem 5 -> Calculates Miles driven each hour
+ * Problem 6 -> Program Calculates each day pennies double
+ * Problem 7 -> Math Tutor!
+ * Problem 8 -> Program for hotels(Calculates occupations with percentages)
+ * Problem 9 -> Celsius to Fahrenheit Converter 
+ * Problem 10 -> Guessing Game!
+ * Created on April 8,2015 10:00AM
  */
 
 //System Libraries
@@ -28,23 +27,23 @@ int main(int argc, char** argv) {
     bool loop=true;
     do{
         //Display the selection
-        cout<<"Type 0 to solve problem 1"<<endl;
-        cout<<"Type 1 to solve problem 2"<<endl;
-        cout<<"Type 2 to solve problem 3"<<endl;
-        cout<<"Type 3 to solve problem 4"<<endl;
-        cout<<"Type 4 to solve problem 5"<<endl;
-        cout<<"Type 5 to solve problem 6"<<endl;
-        cout<<"Type 6 to solve problem 7"<<endl;
-        cout<<"Type 7 to solve problem 8"<<endl;
-        cout<<"Type 8 to solve problem 9"<<endl;
-        cout<<"Type 9 to solve problem 10"<<endl;
+        cout<<"Type 1 to solve problem 1"<<endl;
+        cout<<"Type 2 to solve problem 2"<<endl;
+        cout<<"Type 3 to solve problem 3"<<endl;
+        cout<<"Type 4 to solve problem 4"<<endl;
+        cout<<"Type 5 to solve problem 5"<<endl;
+        cout<<"Type 6 to solve problem 6"<<endl;
+        cout<<"Type 7 to solve problem 7"<<endl;
+        cout<<"Type 8 to solve problem 8"<<endl;
+        cout<<"Type 9 to solve problem 9"<<endl;
+        cout<<"Type 10 to solve problem 10"<<endl;
         cout<<"Type anything else to quit with no solutions."<<endl;
         //Read the choice
-        char choice;
+        int choice;
         cin>>choice;
         //Solve a problem that has been chosen.
         switch(choice){
-                case '0':{
+                case 1:{
                     //Declare Variables
                     char agn;
                     int num,ttl=0;
@@ -70,7 +69,7 @@ int main(int argc, char** argv) {
                     cout<<"Have a nice day!"<<endl;
                     break;
                 }
-                case '1':{
+                case 2:{
                     //Declare Variables
                     float miL=1.5;
                     unsigned short yrs;
@@ -84,7 +83,7 @@ int main(int argc, char** argv) {
                         cout<<"Year: "<<yrs<<"  Milliliters: "<<(miL*yrs)<<endl;     
                     break;
                 }
-                case '2':{
+                case 3:{
                     //Declare Variables
                     float caL=3.6;
                     unsigned short min=5;
@@ -98,7 +97,7 @@ int main(int argc, char** argv) {
                     }
                     break;
                 }
-                case '3':{
+                case 4:{
                     //Global Constants
                     unsigned char CNVTPCT=100;
                     //Declare Variables
@@ -120,7 +119,7 @@ int main(int argc, char** argv) {
                     }
                     break;
                 }
-                case '4':{
+                case 5:{
                     //Declare Variables
                     char agn;
                     float spd,hrsDvn,dstnce;
@@ -151,7 +150,7 @@ int main(int argc, char** argv) {
                     }
                     break;
                 }
-            case '5':{
+            case 6:{
                 //Global Constants
                 unsigned short CVTPCT=100;
                  //Declare Variables
@@ -180,7 +179,7 @@ int main(int argc, char** argv) {
                 }
                 break;
             }
-            case '6':{
+            case 7:{
                 ///Global Constants
                 short minval=1,maxval=50;//Minimum Addition and Subtraction Values
                 short minMval=1,maxMval=12;//Minimum Multiplication and Division Values
@@ -305,7 +304,7 @@ int main(int argc, char** argv) {
                 }while(choice>='1'&&choice<='4');
                 break;
             }
-            case '7':{
+            case 8:{
                //Declare Variables
                 unsigned short flr,rms,ocu,unocu;
                 float ttlrms,ttlocu;
@@ -338,7 +337,7 @@ int main(int argc, char** argv) {
                 }
                 break;
             }
-            case '8':{
+            case 9:{
                 //Declare Variables
                 float cEl,fAhr;
                 //Intro to the program
@@ -353,7 +352,7 @@ int main(int argc, char** argv) {
                 }
                 break;
             }
-            case '9':{
+            case 10:{
                 //Global Constants
                 unsigned short minval=1,maxval=25;//Minimum Addition and Subtraction Values
                 //Declare variables

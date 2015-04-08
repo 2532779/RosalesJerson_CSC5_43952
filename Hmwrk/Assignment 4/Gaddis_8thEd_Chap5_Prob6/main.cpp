@@ -29,6 +29,7 @@ int main(int argc, char** argv) {
     //Prompt user for inputs
     cout<<"How many hours have you driven?"<<endl;
     cin>>hrsDvn;
+    //Input validation
     while (hrsDvn<0)
     {
         cout<<"ERROR!.....Input a number greater than zero"<<endl;
