@@ -25,8 +25,20 @@ int main(int argc, char** argv) {
     //Prompt User for inputs
     cout<<"What is the price of the item?"<<endl;
     cin>>price;
+    while (price<=0)
+    {
+        cout<<"You cannot input a negative number or zero please enter a positive"
+                " number"<<endl;
+        cin>>price;
+    }
     cout<<"What is the markup of the item?"<<endl;
     cin>>markup;
+    while (markup<=0)
+    {
+        cout<<"You cannot use a number less than or equal to zero please enter"
+                " a positive number!"<<endl;
+        cin>>markup;
+    }
     //Calling Function calcRet
     total=calcRet(price,markup);
     //Output the results
