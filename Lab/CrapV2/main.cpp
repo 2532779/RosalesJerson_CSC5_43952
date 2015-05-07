@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Jerson Rosales
- * Created on April 29, 2015, 9:39 AM
+ * Created on May 4, 2015, 8:02 AM
  * Purpose:  Check out Dice Statisics
  */
 
@@ -9,6 +9,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
 using namespace std;
 
 //User Libraries
@@ -23,28 +24,30 @@ int main(int argc, char** argv) {
     //Initialize the random number seed
     srand(static_cast<unsigned int>(time(0)));
     //Declare variables
-    int win=0,lose=0,nThrows=0,nGames=200;
+    const int SIZE=13;
+    int win[SIZE]={},lose[SIZE]={},nThrows[SIZE]={};
+    int nGames=3600;
     int thwGame=0,maxNThw=0;
     //Loop on the games and take stats
     for(int game=1;game<=nGames;game++){
         int sum=roll(2,6);
-        nThrows++;
+        nThrows[sum]++;
         thwGame=1;
-        if(sum==2||sum==3||sum==12)lose++;
-        else if(sum==7||sum==11)win++;
+        if(sum==2||sum==3||sum==12)lose[sum]++;
+        else if(sum==7||sum==11)win[sum]++;
         else{
             //Keep throwing
             bool rollAgn;
             do{
                 rollAgn=true;
                 int sum2=roll(2,6);
-                nThrows++;
+                nThrows[sum]++;
                 thwGame++;
                 if(sum2==sum){
-                    win++;
+                    win[sum]++;
                     rollAgn=false;
                 }else if(sum2==7){
-                    lose++;
+                    lose[sum]++;
                     rollAgn=false;
                 }
             }while(rollAgn);
@@ -53,15 +56,18 @@ int main(int argc, char** argv) {
     }
     //Output wins and losses
     cout<<"Total number of Games = "<<nGames<<endl;
-    cout<<"Total number of wins  = "<<win<<endl;
-    cout<<"Total number losses   = "<<lose<<endl;
-    cout<<"Total win + lose      = "<<win+lose<<endl;
-    cout<<"Percentage win        = "
-            <<100.0f*win/nGames<<"%"<<endl;
-    cout<<"Percentage loss       = "
-            <<100.0f*lose/nGames<<"%"<<endl;
-    cout<<"Number of throws      = "<<nThrows<<endl;
-    cout<<"Average throw/game    = "<<1.0f*nThrows/nGames<<endl;
+    cout<<"Sum  Win  Loss  Total   %Win   %Loss Avg Throw "<<endl;
+    for(int sindx=0;sindx<SIZE;sindx++){
+        cout<<setw(2)<<sindx;
+        cout<<setw(5)<<win[sindx];
+        cout<<setw(5)<<lose[sindx];
+        cout<<setw(6)<<win[sindx]+lose[sindx];
+        cout<<win[sindx];
+        cout<<setprecision(2)<<fixed<<showpoint;
+        cout<<setw(7)<<100.0f*win[sindx]/nGames<<"%";
+        cout<<setw(7)<<100.0f*lose[sindx]/nGames<<"%";
+        cout<<1.0f*nThrows[sindx]/(win[sindx]+lose[sindx])<<endl;
+    }
     cout<<"Max throws in any game= "<<maxNThw<<endl;
     //Exit stage right
     return 0;
@@ -74,5 +80,5 @@ unsigned char roll(unsigned char nDie,unsigned char sides){
     }
     return sum;
 }
-}
+
 
