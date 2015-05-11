@@ -18,17 +18,30 @@ using namespace std;
 //Global Constants
 
 //Function Prototypes
-int dealhnd(int,int);
+float dealhnd();
 
 //Execution Begins here
 int main(int argc, char** argv) {
+    //Setting the random seed
+    unsigned seed=time(0);
+    srand(seed);
+    //Declare variables
+    unsigned int card1;//Holding first card
+    unsigned int a,b,c,d;//For the functions
+    char deal;
     cout<<"Welcome to BlackJack!"<<endl;
-    const int deckcrd[52];
+    cout<<"Enter D or d to deal a hand"<<endl;
+    dealhnd(); 
+    //do {
+    //   cin>>deal;
+    //}while (deal=='D'||deal=='d');
     
 
     return 0;
 }
-
-int dealhnd (int f,int s){
-   
+float dealhnd(){
+    int card1,card2,card3,card4;
+    card1=rand()%13+1;
+    cout<<card1<<endl;
+    
 }
