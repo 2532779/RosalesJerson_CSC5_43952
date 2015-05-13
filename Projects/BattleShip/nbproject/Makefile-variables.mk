@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Debug=blackjack
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/blackjack
+CND_ARTIFACT_NAME_Debug=battleship
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/battleship
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Debug=blackjack.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/blackjack.tar
+CND_PACKAGE_NAME_Debug=battleship.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/battleship.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_4.x-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_4.x-Windows
-CND_ARTIFACT_NAME_Release=blackjack
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/blackjack
+CND_ARTIFACT_NAME_Release=battleship
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_4.x-Windows/battleship
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_4.x-Windows/package
-CND_PACKAGE_NAME_Release=blackjack.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/blackjack.tar
+CND_PACKAGE_NAME_Release=battleship.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_4.x-Windows/package/battleship.tar
 #
 # include compiler specific variables
 #
