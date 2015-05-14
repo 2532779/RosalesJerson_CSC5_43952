@@ -10,6 +10,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -30,12 +31,14 @@ void visual();//Visual To help determine coordinates
 //Execution Begins here
 int main(int argc, char** argv) {
     //Declare Variables
+    ofstream out;
     int pos1,pos2;//Entering position of ships
     char input;//Input for surrendering
     srand(time(0));//Setting time
     clear();//Setting board
     spnShip();//Spawning Ships
-    while(input!='y'||input!='Y'||numShip()==0)
+    out.open("NumOfShip.doc");//Opening file
+    do
         {
                 cout<<"Please input location:"<<endl;
                 visual();//Visual to see the board easier
@@ -56,15 +59,27 @@ int main(int argc, char** argv) {
                 else
                         cout<<"Miss!"<<endl;
                 cout<<"Number of ships left: "<<numShip()<<endl;
+                //Putting number of ships to a file
+                out<<"The Number of ships lefts are.."<<numShip()<<endl;
+                //-----------------------------------------
                 cout<<"Do you want to surrender (y/n)? "<<endl;
                 if(numShip()!=0){
                     cin>>input; 
+                    while (input!='y'&&input!='n'){
+                        cout<<"You must enter lower case y or n"<<endl;
+                        cin>>input;
+                    }
                 }
                 else if (numShip()==0){
-                    cout<<"Enter Y or y to quit"<<endl;
+                    cout<<"Enter y to quit"<<endl;
                     cin>>input;
+                    while (input!='y'){
+                        cout<<"You must enter lower case y"<<endl;
+                        cin>>input;
+                    }
                 }
-        }
+        }while(input!='y');
+    out.close();//Closing file
         cout<<"Game over!"<<endl;
     return 0;
 
@@ -125,7 +140,7 @@ void visual(){
     for (int i=0;i<=row;i++){
         cout<<i<<"  ";
         for(int j=0;j<10;j++){
-            cout<<board[row][col]<<" ";    
+            cout<<board[row][col]<<setw(2);    
         }
         cout<<"\n";
     }
