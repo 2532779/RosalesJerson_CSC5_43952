@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     srand(time(0));//Setting time
     clear();//Setting board
     spnShip();//Spawning Ships
-    while(input!='y'&&input!='Y')
+    while(input!='y'||input!='Y'||numShip()==0)
         {
                 cout<<"Please input location:"<<endl;
                 visual();//Visual to see the board easier
@@ -57,7 +57,13 @@ int main(int argc, char** argv) {
                         cout<<"Miss!"<<endl;
                 cout<<"Number of ships left: "<<numShip()<<endl;
                 cout<<"Do you want to surrender (y/n)? "<<endl;
-                cin>>input;      
+                if(numShip()!=0){
+                    cin>>input; 
+                }
+                else if (numShip()==0){
+                    cout<<"Enter Y or y to quit"<<endl;
+                    cin>>input;
+                }
         }
         cout<<"Game over!"<<endl;
     return 0;
