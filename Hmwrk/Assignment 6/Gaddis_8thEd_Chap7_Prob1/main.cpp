@@ -19,27 +19,30 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare Variables
     int SIZE=9;
-    float in[SIZE];
-    int max=in[0],min=in[0];
+    int in[SIZE];
+    int highest,lowest;
+    int count;
     //Prompt user for inputs
-    cout<<"Enter 10 numbers and i'll tell you which one is the lowest and "
+    cout<<"Enter 10 numbers and I'll tell you which one is the lowest and "
             "highest."<<endl;
-    for (int i=0;i<=SIZE;i++){
-        cin>>in[SIZE];
+         
+    for (count=0;count<=SIZE;count++){
+         cin>>in[count];
     }
-    
-    for (int i=0;i<SIZE;i++){
-        if(max>[i]){
-            max=[i];
-        }
-        else if (min<[i]){
-            min=[i];
+    highest=in[0];
+    for(count=0;count<=SIZE;count++){
+        if(in[count]>highest){
+            highest=in[count];
         }
     }
-    cout<<max<<endl;
-    cout<<min<<endl;
-  
-    
+    cout<<"Highest Number: "<<highest<<endl;
+    lowest=in[0];
+    for(count=0;count<=SIZE;count++){
+        if(in[count]<lowest){
+            lowest=in[count];
+        }
+    }
+    cout<<"Lowest Number: "<<lowest<<endl;
 
     return 0;
 }
