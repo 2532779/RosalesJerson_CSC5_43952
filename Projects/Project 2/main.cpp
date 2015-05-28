@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -24,6 +25,7 @@ char board[row][col];//The board Variable
 
 //Function Prototypes
 void clear();//Board
+void users();//Getting the users or returning players
 int numShip();//Number of ships function
 void spnShip();//Spawning the Ships
 bool aslt(int,int);//The Assault on the ships
@@ -35,6 +37,7 @@ int main(int argc, char** argv) {
     int pos1,pos2;//Entering position of ships
     char input;//Input for surrendering
     srand(time(0));//Setting time
+    users();//Getting Users
     clear();//Setting board
     spnShip();//Spawning Ships
     out.open("NumOfShip.doc");//Opening file
@@ -144,4 +147,19 @@ void visual(){
         }
         cout<<"\n";
     }
+}
+
+void users(){
+    string name;
+    char ansr;
+    ofstream player;
+    player.open("Username.doc");
+    cout<<"Are you a new or returning player?(Y/N)"<<endl;
+    cin>>ansr;
+    if(ansr='Y'){
+        cout<<"Please type in your Player name"<<endl;
+        cin>>name;
+        player<<name;
+    }
+    player.close();
 }
