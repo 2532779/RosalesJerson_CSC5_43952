@@ -20,8 +20,8 @@ using namespace std;
 //Global Constants
 const int row=10;//Number of rows
 const int col=10;//Number of columns
-const int numships=5;//NUmber of Battleships
-char board[row][col];//The board Variable
+const int numships=5;//NUmber of Battleship
+char board[row][col];
 
 //Function Prototypes
 void clear();//Board
@@ -34,30 +34,30 @@ void visual();//Visual To help determine coordinates
 int main(int argc, char** argv) {
     //Declare Variables
     ofstream out;
-    int pos1,pos2;//Entering position of ships
-    char input;//Input for surrendering
+    int pos2;//Entering position of ships
+    char input,pos1;//Input for surrendering&&coordinate
     srand(time(0));//Setting time
     users();//Getting Users
     clear();//Setting board
     spnShip();//Spawning Ships
     out.open("NumOfShip.doc");//Opening file
+    visual();//Visual to see the board easier
     do
         {
-                cout<<"Please input location:"<<endl;
-                visual();//Visual to see the board easier
-                cout<<"Enter x coordinate..."<<endl;
+                cout<<"Enter the letter coordinate coordinate..."<<endl;
                 cin>>pos1;
-                while(pos1<=0||pos1>=11){
+                int colmns=(pos1-65);
+                while(colmns<0||colmns>=11){
                     cout<<"Enter a valid coordinate"<<endl;
                     cin>>pos1;
                 }
-                cout<<"Enter y coordinate..."<<endl;
+                cout<<"Enter the number coordinate..."<<endl;
                 cin>>pos2;  
-                while(pos2<=0||pos2>=11){
+                while(pos2<0||pos2>=11){
                     cout<<"Enter a valid coordinate"<<endl;
                     cin>>pos2;
                 }
-                if(aslt(pos1,pos2))//Assaulting the ship
+                if(aslt(pos2,colmns))//Assaulting the ship
                         cout<<"Hit!"<<endl;
                 else
                         cout<<"Miss!"<<endl;
@@ -65,6 +65,20 @@ int main(int argc, char** argv) {
                 //Putting number of ships to a file
                 out<<"The Number of ships lefts are.."<<numShip()<<endl;
                 //-----------------------------------------
+                for(int i=0;i<10;i++){
+                for(int j=0;j<10;j++){
+                    board[i][j] = '0';
+                    }  
+                }
+                board[pos2][colmns] = 'X';
+                cout<<"  A B C D E F G H I J"<<endl;
+                for(int i=0;i<10;i++){
+                    cout<<i<<" ";
+                    for(int j=0;j<10;j++){
+                        cout<<board[i][j]<<" ";       
+                    }
+                    cout<<"\n";
+                }
                 cout<<"Do you want to surrender (y/n)? "<<endl;
                 if(numShip()!=0){
                     cin>>input; 
@@ -139,9 +153,9 @@ void visual(){
             board[row][col]='0';
         }
     }
-    cout<<"   1 2 3 4 5 6 7 8 9 10"<<endl;
-    for (int i=0;i<=row;i++){
-        cout<<i<<"  ";
+    cout<<"  A B C D E F G H I J"<<endl;
+    for (int i=0;i<row;i++){
+        cout<<i<<" ";
         for(int j=0;j<10;j++){
             cout<<board[row][col]<<setw(2);    
         }
@@ -149,17 +163,26 @@ void visual(){
     }
 }
 
+
 void users(){
     string name;
     char ansr;
     ofstream player;
-    player.open("Username.doc");
     cout<<"Are you a new or returning player?(Y/N)"<<endl;
     cin>>ansr;
-    if(ansr='Y'){
-        cout<<"Please type in your Player name"<<endl;
-        cin>>name;
-        player<<name;
+    switch (ansr){
+        case 'Y':{
+            cout<<"Enter your Username for the game!"<<endl;
+            player.open("Username.txt");
+            cin>>name;
+            player<<name;
+            player.close();
+            break;
+        }
+        case 'N':{
+            cout<<"Enter your Username to begin!"<<endl;
+            break;
+        }
     }
-    player.close();
+
 }
