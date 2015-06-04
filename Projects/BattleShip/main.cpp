@@ -118,6 +118,7 @@ void spnShip(){
                         s++;
                         board[x][y] = 1;
                 }
+                cout << "ship " << s + 1 << " (x, y): " << x << " " << y << endl;
         }
 }
 
