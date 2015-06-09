@@ -10,41 +10,45 @@
 #include <ctime>
 #include <cstdlib>
 #include <iomanip>
-#include <fstream>
-#include <string>
 #include <cctype>
+#include <fstream>
 
 using namespace std;
 
 //User Libraries
 
 //Global Constants
-const int row=10;//Number of rows
-const int col=10;//Number of columns
-const int numships=5;//Number of Battleship
-
+const int col=10;
 //Function Prototypes
-void users(int);//Getting the users or returning players
-int numShip(char [][col],int);//Number of ships function
+int numShip(const char [][col],const int &);//Number of ships function
 void spnShip(char [][col],int);//Spawning the Ships
 bool aslt(char [][col],int,int,int);//The Assault on the ships
 void visual(char [][col],int);//Visual To help determine coordinates
 void initializeBoard(char [][col],int);//Fills board with 0's
 //Execution Begins here
 int main(int argc, char** argv) {
-    //Declare Variable
-    //users(2);
+    //Declare Variables
+    const int row=10;
     char board[row][col];
     int pos1;//Entering position of ships
-    char input,pos2;//Input for surrendering&&coordinate
+    char input,pos2,level;//Input for surrendering&&coordinate
     srand(time(0));//Setting time
-    //users();//Getting Users
+    cout<<"Welcome to Battleship!"<<endl;
+    cout<<"Please Enter the difficulty you wish to challenge!(E,M,H,P)"<<endl;
+    cout<<"E-Easy"<<endl;
+    cout<<"M-Medium"<<endl;
+    cout<<"H-Hard"<<endl;
+    cout<<"P-Professional"<<endl;
+    cin>>level;
     initializeBoard(board,row);//Getting the board to fill with zeros
     spnShip(board,row);//Spawning Ships
-    do
-    {
+    switch(toupper(level)){
+        case 'E':{
+            int x=1;
+            do
+            {
                 visual(board,row);
-                cout<<"Enter the letter coordinate coordinate..."<<endl;
+                cout<<"Enter the letter coordinate..."<<endl;
                 cin>>pos2;
                 int colmns=(toupper(pos2)-65);
                 cout<<"Enter the number coordinate..."<<endl;
@@ -60,25 +64,154 @@ int main(int argc, char** argv) {
                 else{
                         cout<<"Miss!"<<endl;
                 }
-                cout<<"Number of ships left: "<<numShip(board,row)<<endl;
+                cout<<"Number of spots left: "<<numShip(board,row)<<endl;
                 if(numShip(board,row)!=0){
                     cout<<"Do you want to surrender (y/n)? "<<endl;
                     cin>>input;
-                    while (input!='y'&&input!='n'){
-                        cout<<"You must enter lower case y or n"<<endl;
+                    while (input!='Y'&&input!='N'){
+                        cout<<"You must Y or N"<<endl;
                         cin>>input;
                     }
                 }
                 else if (numShip(board,row)==0){
-                    cout<<"Enter y to quit"<<endl;
+                    cout<<"Enter Y to quit"<<endl;
                     cin>>input;
-                    while (input!='y'){
-                        cout<<"You must enter lower case y"<<endl;
+                    while (input!='Y'){
+                        cout<<"You must enter Y"<<endl;
                         cin>>input;
                     }
                 }
-    }while(input!='y');
-        //writeFile(name, score);
+                x++;
+                }while(x<=50&&input!='Y');
+                break;
+        }
+        case 'M':{
+            int x=1;
+            do
+            {
+                visual(board,row);
+                cout<<"Enter the letter coordinate..."<<endl;
+                cin>>pos2;
+                int colmns=(toupper(pos2)-65);
+                cout<<"Enter the number coordinate..."<<endl;
+                cin>>pos1;
+                while(pos1<0||pos1>=11){
+                    cout<<"Enter a valid coordinate"<<endl;
+                    cin>>pos1;
+                }
+                
+                if(aslt(board,row,pos1,colmns)){//Assaulting the ship
+                        cout<<"Hit!"<<endl;
+                }
+                else{
+                        cout<<"Miss!"<<endl;
+                }
+                cout<<"Number of spots left: "<<numShip(board,row)<<endl;
+                if(numShip(board,row)!=0){
+                    cout<<"Do you want to surrender (y/n)? "<<endl;
+                    cin>>input;
+                    while (input!='Y'&&input!='N'){
+                        cout<<"You must Y or N"<<endl;
+                        cin>>input;
+                    }
+                }
+                else if (numShip(board,row)==0){
+                    cout<<"Enter Y to quit"<<endl;
+                    cin>>input;
+                    while (input!='Y'){
+                        cout<<"You must enter Y"<<endl;
+                        cin>>input;
+                    }
+                }
+                x++;
+                }while(x<=40&&input!='Y');
+            break;
+        }
+        case 'H':{
+            int x=1;
+                do
+                {
+                    visual(board,row);
+                    cout<<"Enter the letter coordinate..."<<endl;
+                    cin>>pos2;
+                    int colmns=(toupper(pos2)-65);
+                    cout<<"Enter the number coordinate..."<<endl;
+                    cin>>pos1;
+                    while(pos1<0||pos1>=11){
+                        cout<<"Enter a valid coordinate"<<endl;
+                        cin>>pos1;
+                    }
+
+                    if(aslt(board,row,pos1,colmns)){//Assaulting the ship
+                            cout<<"Hit!"<<endl;
+                        }
+                    else{
+                            cout<<"Miss!"<<endl;
+                    }
+                    cout<<"Number of spots left: "<<numShip(board,row)<<endl;
+                    if(numShip(board,row)!=0){
+                    cout<<"Do you want to surrender (y/n)? "<<endl;
+                    cin>>input;
+                    while (input!='Y'&&input!='N'){
+                        cout<<"You must Y or N"<<endl;
+                        cin>>input;
+                        }
+                    }
+                    else if (numShip(board,row)==0){
+                        cout<<"Enter Y to quit"<<endl;
+                        cin>>input;
+                        while (input!='Y'){
+                            cout<<"You must enter Y"<<endl;
+                            cin>>input;
+                        }
+                    }
+                    x++;
+                }while(x<=30&&input!='Y');
+            break;
+        }
+        case 'P':{
+            int x=1;
+                do
+                {
+                    visual(board,row);
+                    cout<<"Enter the letter coordinate..."<<endl;
+                    cin>>pos2;
+                    int colmns=(toupper(pos2)-65);
+                    cout<<"Enter the number coordinate..."<<endl;
+                    cin>>pos1;
+                    while(pos1<0||pos1>=11){
+                        cout<<"Enter a valid coordinate"<<endl;
+                        cin>>pos1;
+                    }
+
+                    if(aslt(board,row,pos1,colmns)){//Assaulting the ship
+                            cout<<"Hit!"<<endl;
+                        }
+                    else{
+                            cout<<"Miss!"<<endl;
+                    }
+                    cout<<"Number of spots left: "<<numShip(board,row)<<endl;
+                    if(numShip(board,row)!=0){
+                    cout<<"Do you want to surrender (y/n)? "<<endl;
+                    cin>>input;
+                    while (input!='Y'&&input!='N'){
+                        cout<<"You must Y or N"<<endl;
+                        cin>>input;
+                        }
+                    }
+                    else if (numShip(board,row)==0){
+                        cout<<"Enter Y to quit"<<endl;
+                        cin>>input;
+                        while (input!='Y'){
+                            cout<<"You must enter Y"<<endl;
+                            cin>>input;
+                        }
+                    }
+                    x++;
+                }while(x<=20&&input!='Y');
+            break;
+        }
+    }
         cout<<"Game over!"<<endl;
     return 0;
 
@@ -93,7 +226,7 @@ void initializeBoard(char board[][col],int r){
 
 }
 
-int numShip(char board[][col],int r){
+int numShip(const char board[][col],const int &r){
     int c = 0;
         for(int i=0;i<r;i++)
         {
@@ -107,24 +240,113 @@ int numShip(char board[][col],int r){
 }
 
 void spnShip(char board[][col],int r){
-    
-    int s = 0;
-        while(s < numships)
-        {
-                int x=rand()%r;
-                int y=rand()%col;
-                if(board[x][y]!= '1')
-                {
-                        s++;
-                        board[x][y] = '1';
+       int map=rand()%10;
+       ifstream read;
+       switch (map){
+           case 0:{
+            read.open("map1.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
                 }
-                
-                cout << "ship " << s + 1 << " (x, y): " << x << " " << y << endl;
-        }
+            }
+            read.close();
+            break;
+           }
+           case 1:{
+               read.open("map2.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 2:{
+               read.open("map3.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 3:{
+               read.open("map4.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 4:{
+               read.open("map5.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 5:{
+               read.open("map6.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 6:{
+               read.open("map7.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 7:{
+               read.open("map8.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 8:{
+               read.open("map9.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+           case 9:{
+               read.open("map10.txt");
+            for(int i=0;i<r;i++){
+                for(int j=0;j<col;j++){
+                    read>>board[i][j];
+                }
+            }
+            read.close();
+               break;
+           }
+       }
 }
 
 bool aslt(char board[][col],int r,int x,int y){
-    cout << "*board[" << x << "][" << y << "]\n";
     if(board[x][y] == '1')
         {
             board[x][y] = 'H';
@@ -134,7 +356,6 @@ bool aslt(char board[][col],int r,int x,int y){
     board[x][y] = 'M';
     return false;
 }
-
 
 void visual(char board[][col],int r){
     cout<<"  A B C D E F G H I J"<<endl;
@@ -151,55 +372,3 @@ void visual(char board[][col],int r){
         cout<<"\n";
     }
 }
-
-//void users(int score){
-//    string name;
-//    char ansr;
-//    ofstream fileName;
-//    cout<<"Are you a new player?(Y/N)"<<endl;
-//    cin>>ansr;
-//    switch (toupper(ansr)){
-//        case 'Y':{
-//            cout<<"Enter your 3 character name for the game!"<<endl;
-//            fileName.open("Username.txt", ios::app);
-//            //cin.getline(name, 3);
-//            cin >>name;
-//            //writeFile(name, score);
-//            fileName << name<< " " << score << endl;
-//           //player
-//            fileName.close();
-//            break;
-//        }
-//        case 'N':{
-//            cout<<"Enter your Username to begin!"<<endl;
-//            cout << "Enter your 3 character name: "; //Tao
-//            char letters[3]; //Tao
-//            cin.getline(letters, 3);
-//            string playerName;
-//            int tempScore, number;
-//            name = (string)letters;
-//            bool found = false;
-//
-//            fileName.open("Username.txt");
-//            if(fileName.fail()) {
-//                cout << "Error opening a file\n";
-//                exit(0);
-//            }
-//            else {
-//                while(!fileName.eof()){
-//                    //fileName >> playerName >> number;
-//
-//                    if(name == fileName){
-//                        tempScore = number;
-//
-//                        cout << "Name found" << fileName;
-//                        found = true;
-//                    }
-//                }
-//            }
-//        }
-//            break;
-//        }
-//    }
-    
-    
